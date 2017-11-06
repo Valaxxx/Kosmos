@@ -5,40 +5,6 @@
 <head>
 <meta charset="utf-8">
 <title>Космос LAB</title>
-<style type="text/css">
-#mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: xx-large;
-	font-weight: bold;
-	background-color: #E3F0FB;
-	border-radius: 4px;
-	padding: 10px;
-	text-align: center;
-}
-.buttonStyle {
-	border-radius: 4px;
-	border: thin solid #F0E020;
-	padding: 5px;
-	background-color: #F8F094;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color: #663300;
-	width: 75px;
-}
-
-.buttonStyle:hover {
-	border: thin solid #FFCC00;
-	background-color: #FCF9D6;
-	color: #996633;
-	cursor: pointer;
-}
-.buttonStyle:active {
-	border: thin solid #99CC00;
-	background-color: #F5FFD2;
-	color: #669900;
-	cursor: pointer;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" />
 
@@ -101,7 +67,7 @@
 	</form>
 	
 	
-	<div >
+	<div id="rocketDiv">
 		<img id="roket1" class="rotate0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBo5bZVTUVuCFl-9Jt4LyGH3kUTuv5LzwguNEQyBgEybdgnLj9lw">
 	</div>
 	<button id="clickButton" class="buttonStyle">click me</button>
@@ -125,29 +91,50 @@
 	<script> 
 	var myButton = document.getElementById("clickButton");
 	var myText = document.getElementById("helloText");
+
+	var img = document.getElementById("roket1");
 	
 	var positionX = 0;
 	var positionY = 0;
 	
-	var state = 0
+	var state = 0;
+	var fa = delay(f,1000);
+			
+	var array = ["rotate0","rotate20","rotate40","rotate60","rotate80","rotate100","rotate120","rotate140","rotate160","rotate180"];
+//	var array2 = ["rotate0","rotate20","rotate40","rotate60","rotate80","rotate100","rotate120","rotate140","rotate160","rotate180"];
+
 	
-	var array = ["rotate0","rotate20","rotate40"];
-	
-	myButton.addEventListener('click', doSomething, false)
+	myButton.addEventListener('click', doSomething1, false)
 	//myButton.addEventListener('click', doSomething, false)
 
 	function doSomething() {
-		var img = document.getElementById("roket1");
-		for(var i = 0; i < array.length;i++){
-			img.setAttribute("class",array[i]);
-			setTimeout(arguments.callee, 20000);
-			console.log(array[i]+' '+i+' '+array.length);
-			
-		};
+//		for(var i = state; i < array.length;i++){\
+		if(state<9){
+			state++;
+		}else{
+			state = 0;
+		}
+		img.setAttribute("class",array[state]);
+		console.log(array[state]+' '+state+' '+array.length);
+//		};
 		
 		
 	}
-//		myText.textContent = '<div id="id1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBo5bZVTUVuCFl-9Jt4LyGH3kUTuv5LzwguNEQyBgEybdgnLj9lw"></div>';//"hello, world!";
+
+	function f(x) {
+	  alert( x );
+	}
+	function doSomething1() {
+		for(var i = 0; i < array.length;i++){
+			img.setAttribute("class",array[state]);
+			fa(1000);
+			console.log(array[state]+' '+state+' '+array.length);
+		}
+		
+	}
+
+
+
 	</script>
 
 </body>

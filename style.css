@@ -1,0 +1,59 @@
+body {
+    background: wheat;
+}
+
+nav {
+   background: green;  
+    margin-bottom: 10px;
+    padding: 10px
+    
+}
+
+.nav-link {
+    background : red;
+    padding: 10px;
+    
+}
+
+.nav-link:hover {
+    background:  white;
+    font-size: 32px;
+    padding: 10px;
+    
+}
+
+
+
+.rotate0 {
+    transform:none;
+}
+
+.rotate20 {
+    transform:rotate(20deg);
+}
+
+.rotate40 {
+    transform:rotate(40deg);
+}
+#rotate60 {
+    transform:rotate(60deg);
+}
+#rotate80 {
+    transform:rotate(80deg);
+}
+#rotate100 {
+    transform:rotate(100deg);
+}
+#rotate120 {
+    transform:rotate(120deg);
+}
+#rotate140 {
+    transform:rotate(140deg);
+}
+#rotate160 {
+    transform:rotate(160deg);
+}
+#rotate180 {
+    transform:rotate(180deg);
+}
+

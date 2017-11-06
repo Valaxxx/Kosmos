@@ -15,12 +15,19 @@ nav {
     
 }
 
+
 .nav-link:hover {
     background:  white;
     font-size: 32px;
     padding: 10px;
     
 }
+
+
+#rocketDiv {
+    margin: 40px;
+}
+
 
 
 
@@ -30,30 +37,42 @@ nav {
 
 .rotate20 {
     transform:rotate(20deg);
+    margin-left: 50px;
+
 }
 
 .rotate40 {
     transform:rotate(40deg);
+    margin-left: 60px;
+
+    
 }
-#rotate60 {
+.rotate60 {
     transform:rotate(60deg);
+    margin-left: 70px;
 }
-#rotate80 {
+.rotate80 {
     transform:rotate(80deg);
+    margin-left: 80px;
 }
-#rotate100 {
+.rotate100 {
     transform:rotate(100deg);
+    margin-left: 90px;
 }
-#rotate120 {
+.rotate120 {
     transform:rotate(120deg);
+    margin-left: 100px;
 }
-#rotate140 {
+.rotate140 {
     transform:rotate(140deg);
+    margin-left: 110px;
 }
-#rotate160 {
+.rotate160 {
     transform:rotate(160deg);
+    margin-left: 120px;
 }
-#rotate180 {
+.rotate180 {
     transform:rotate(180deg);
+    margin-left: 130px;
 }
 
